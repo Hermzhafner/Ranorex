@@ -79,21 +79,11 @@ namespace BambooTest
 
             Init();
 
-            Report.Log(ReportLevel.Info, "Website", "Opening web site 'https://orf.at' with browser 'IE' in normal mode.", new RecordItemIndex(0));
-            Host.Current.OpenBrowser("https://orf.at", "IE", "", false, false, false, false, false);
-            Delay.Milliseconds(100);
+            Report.Log(ReportLevel.Info, "User", "Hello", new RecordItemIndex(0));
             
-            Report.Log(ReportLevel.Info, "Validation", "Validating AttributeEqual (Src='http://orf.at/mojo/1_3/storyserver//news/news/images/flags/flag.wahl17.svg') on item 'NewsORFAt.Wahl17'.", repo.NewsORFAt.Wahl17Info, new RecordItemIndex(1));
-            Validate.Attribute(repo.NewsORFAt.Wahl17Info, "Src", "http://orf.at/mojo/1_3/storyserver//news/news/images/flags/flag.wahl17.svg");
-            Delay.Milliseconds(100);
+            Report.Log(ReportLevel.Info, "User", "Log", new RecordItemIndex(1));
             
-            Report.Log(ReportLevel.Info, "Validation", "Validating AttributeEqual (Title='Wahl 17') on item 'NewsORFAt.Wahl17'.", repo.NewsORFAt.Wahl17Info, new RecordItemIndex(2));
-            Validate.Attribute(repo.NewsORFAt.Wahl17Info, "Title", "Wahl 17");
-            Delay.Milliseconds(100);
-            
-            Report.Log(ReportLevel.Info, "Application", "Closing application containing item 'NewsORFAt'.", repo.NewsORFAt.SelfInfo, new RecordItemIndex(3));
-            Host.Current.CloseApplication(repo.NewsORFAt.Self, new Duration(0));
-            Delay.Milliseconds(0);
+            Report.Log(ReportLevel.Info, "User", "Message", new RecordItemIndex(2));
             
         }
 

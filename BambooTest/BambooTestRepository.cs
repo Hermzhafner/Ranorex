@@ -27,7 +27,6 @@ namespace BambooTest
     public partial class BambooTestRepository : RepoGenBaseFolder
     {
         static BambooTestRepository instance = new BambooTestRepository();
-        BambooTestRepositoryFolders.NewsORFAtAppFolder _newsorfat;
         BambooTestRepositoryFolders.GoogleAppFolder _google;
 
         /// <summary>
@@ -45,7 +44,6 @@ namespace BambooTest
         public BambooTestRepository() 
             : base("BambooTestRepository", "/", null, 0, false, "363d79d6-8526-4584-aad5-8ccf4c533ff2", ".\\RepositoryImages\\BambooTestRepository363d79d6.rximgres")
         {
-            _newsorfat = new BambooTestRepositoryFolders.NewsORFAtAppFolder(this);
             _google = new BambooTestRepositoryFolders.GoogleAppFolder(this);
         }
 
@@ -66,15 +64,6 @@ namespace BambooTest
         }
 
         /// <summary>
-        /// The NewsORFAt folder.
-        /// </summary>
-        [RepositoryFolder("5ad3f004-ec78-42ec-b171-3cbb40e30997")]
-        public virtual BambooTestRepositoryFolders.NewsORFAtAppFolder NewsORFAt
-        {
-            get { return _newsorfat; }
-        }
-
-        /// <summary>
         /// The Google folder.
         /// </summary>
         [RepositoryFolder("4afaf88d-749c-4efc-aace-489ee91afca3")]
@@ -90,150 +79,6 @@ namespace BambooTest
     [System.CodeDom.Compiler.GeneratedCode("Ranorex", "7.2")]
     public partial class BambooTestRepositoryFolders
     {
-        /// <summary>
-        /// The NewsORFAtAppFolder folder.
-        /// </summary>
-        [RepositoryFolder("5ad3f004-ec78-42ec-b171-3cbb40e30997")]
-        public partial class NewsORFAtAppFolder : RepoGenBaseFolder
-        {
-            RepoItemInfo _wahl17Info;
-            RepoItemInfo _dropdowntoggleInfo;
-            RepoItemInfo _steiermarkInfo;
-            RepoItemInfo _tvthekInfo;
-
-            /// <summary>
-            /// Creates a new NewsORFAt  folder.
-            /// </summary>
-            public NewsORFAtAppFolder(RepoGenBaseFolder parentFolder) :
-                    base("NewsORFAt", "/dom[@domain='orf.at']", parentFolder, 30000, null, false, "5ad3f004-ec78-42ec-b171-3cbb40e30997", "")
-            {
-                _wahl17Info = new RepoItemInfo(this, "Wahl17", ".//body[#'top']//img[@title='Wahl 17']", 30000, null, "3135125b-eedb-4310-9166-7167f2442e92");
-                _dropdowntoggleInfo = new RepoItemInfo(this, "DropdownToggle", ".//div[#'weather-widget']/span[1]", 30000, null, "af4ce9ea-6f08-4f4f-8b63-4d15e307d506");
-                _steiermarkInfo = new RepoItemInfo(this, "Steiermark", ".//div[#'dropdown-menu-56673809']/div[@innertext='Steiermark']", 30000, null, "e1b3d234-1b40-4fad-9f07-42ebe112caa0");
-                _tvthekInfo = new RepoItemInfo(this, "TVthek", ".//ul[#'ss-networkNavigation']/?/?/a[@innertext='TVthek']", 30000, null, "dde731d5-3056-4823-b064-50fca4d06cd1");
-            }
-
-            /// <summary>
-            /// The Self item.
-            /// </summary>
-            [RepositoryItem("5ad3f004-ec78-42ec-b171-3cbb40e30997")]
-            public virtual Ranorex.WebDocument Self
-            {
-                get
-                {
-                    return _selfInfo.CreateAdapter<Ranorex.WebDocument>(true);
-                }
-            }
-
-            /// <summary>
-            /// The Self item info.
-            /// </summary>
-            [RepositoryItemInfo("5ad3f004-ec78-42ec-b171-3cbb40e30997")]
-            public virtual RepoItemInfo SelfInfo
-            {
-                get
-                {
-                    return _selfInfo;
-                }
-            }
-
-            /// <summary>
-            /// The Wahl17 item.
-            /// </summary>
-            [RepositoryItem("3135125b-eedb-4310-9166-7167f2442e92")]
-            public virtual Ranorex.ImgTag Wahl17
-            {
-                get
-                {
-                    return _wahl17Info.CreateAdapter<Ranorex.ImgTag>(true);
-                }
-            }
-
-            /// <summary>
-            /// The Wahl17 item info.
-            /// </summary>
-            [RepositoryItemInfo("3135125b-eedb-4310-9166-7167f2442e92")]
-            public virtual RepoItemInfo Wahl17Info
-            {
-                get
-                {
-                    return _wahl17Info;
-                }
-            }
-
-            /// <summary>
-            /// The DropdownToggle item.
-            /// </summary>
-            [RepositoryItem("af4ce9ea-6f08-4f4f-8b63-4d15e307d506")]
-            public virtual Ranorex.SpanTag DropdownToggle
-            {
-                get
-                {
-                    return _dropdowntoggleInfo.CreateAdapter<Ranorex.SpanTag>(true);
-                }
-            }
-
-            /// <summary>
-            /// The DropdownToggle item info.
-            /// </summary>
-            [RepositoryItemInfo("af4ce9ea-6f08-4f4f-8b63-4d15e307d506")]
-            public virtual RepoItemInfo DropdownToggleInfo
-            {
-                get
-                {
-                    return _dropdowntoggleInfo;
-                }
-            }
-
-            /// <summary>
-            /// The Steiermark item.
-            /// </summary>
-            [RepositoryItem("e1b3d234-1b40-4fad-9f07-42ebe112caa0")]
-            public virtual Ranorex.DivTag Steiermark
-            {
-                get
-                {
-                    return _steiermarkInfo.CreateAdapter<Ranorex.DivTag>(true);
-                }
-            }
-
-            /// <summary>
-            /// The Steiermark item info.
-            /// </summary>
-            [RepositoryItemInfo("e1b3d234-1b40-4fad-9f07-42ebe112caa0")]
-            public virtual RepoItemInfo SteiermarkInfo
-            {
-                get
-                {
-                    return _steiermarkInfo;
-                }
-            }
-
-            /// <summary>
-            /// The TVthek item.
-            /// </summary>
-            [RepositoryItem("dde731d5-3056-4823-b064-50fca4d06cd1")]
-            public virtual Ranorex.ATag TVthek
-            {
-                get
-                {
-                    return _tvthekInfo.CreateAdapter<Ranorex.ATag>(true);
-                }
-            }
-
-            /// <summary>
-            /// The TVthek item info.
-            /// </summary>
-            [RepositoryItemInfo("dde731d5-3056-4823-b064-50fca4d06cd1")]
-            public virtual RepoItemInfo TVthekInfo
-            {
-                get
-                {
-                    return _tvthekInfo;
-                }
-            }
-        }
-
         /// <summary>
         /// The GoogleAppFolder folder.
         /// </summary>
